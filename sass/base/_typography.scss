@@ -1,0 +1,53 @@
+/*Typography Variables*/
+$font-stack: DM Sans, sans-serif;
+
+// Mixins
+@mixin uppercase-text {
+  text-transform: uppercase;
+}
+
+@mixin base-font {
+  font: 100% $font-stack;
+}
+
+body {
+  @include base-font;
+}
+
+@mixin uppercase-cta {
+  font-size: 0.75em;
+  line-height: 1em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  font-weight: bold;
+  letter-spacing: 4.17px;
+  line-height: 48px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.hero__data--date {
+  opacity: 0.75;
+}
+
+.hero__body{
+  font-size: 0.938em;
+  line-height: 25px;
+  opacity: 0.60;
+}
+
+.hero__cta-text {
+  @include uppercase-cta;
+}
+
+
+
+
+
+
+
+

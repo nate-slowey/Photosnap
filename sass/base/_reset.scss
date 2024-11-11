@@ -1,0 +1,80 @@
+/*RESET*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Inherit font settings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+a,
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* Ensure block elements display correctly */
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Set common resets for images and media */
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* List and form resets */
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html,
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-y: scroll;
+}

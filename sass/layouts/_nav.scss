@@ -1,0 +1,12 @@
+.header__nav {
+  display: flex;
+}
+
+.header__nav-item {
+  padding: 0px 20px;
+}
+
+.header__nav-item:hover {
+  opacity: 30%;
+  cursor: pointer;
+}

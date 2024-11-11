@@ -1,187 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./assets/favicon-32x32.png"
-		/>
-		<link rel="stylesheet" href="styles.css" />
-		<script src="script.js" defer></script>
-		<title>Photosnap</title>
-	</head>
-	<body>
-		<header>
-			<div><img src="./assets/shared/desktop/logo.svg" alt="" /></div>
-			<p>Stories</p>
-			<p>Features</p>
-			<p>Pricing</p>
-			<button>Get an invite</button>
-		</header>
-		<main>
-			<section class="create-and-share">
-				<h1 class="upper">Create and share your photo Stories</h1>
-				<p>
-					Photosnap is a platform for photographers and visual
-					storytellers. We make it easy to share photos, tell stories
-					and connect with others.
-				</p>
-				<div>
-					<p class="upper">get an invite</p>
-					<!--make arrow white-->
-					<img src="./assets/shared/desktop/arrow.svg" alt="" />
-				</div>
-				<div>
-					<img
-						src="./assets/home/desktop/create-and-share.jpg"
-						alt="man standing on dock of lake"
-					/>
-				</div>
-			</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <script src="script.js" defer></script>
+    <title>Photosnap</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./assets/shared/desktop/logo.svg" alt="" />
+      </div>
+      <nav class="header__nav">
+        <p class="header__nav-item">
+         <a href="stories.html">Stories</a> 
+        </p>
+        
+        <p class="header__nav-item">Features</p>
+        <p class="header__nav-item">Pricing</p>
+      </nav>
+      <a class="header__invite--button">Get an invite</a>
+    </header>
 
-			<section class="beautiful-stories">
-				<div>
-					<img
-						src="./assets/home/desktop/beautiful-stories.jpg"
-						alt="laptop and books on desk"
-					/>
-				</div>
-				<h1 class="upper">Beautiful stories every time</h1>
-				<p>
-					We provide design templates to ensure your stories look
-					terrific. Easily add photos, text, embed maps and media from
-					other networks. Then share your story with everyone.
-				</p>
-				<div>
-					<p class="upper">view the stories</p>
-					<img src="./assets/shared/desktop/arrow.svg" alt="" />
-				</div>
-			</section>
+    <main>
+      <div class="main-grid">
+        <section class="main-grid__item create-share">
+          <div class="create-share__container">
+            <h1 class="create-share__title">
+              Create and share your photo Stories.
+            </h1>
+            <p class="create-share__body">
+              Photosnap is a platform for photographers and visual storytellers.
+              We make it easy to share photos, tell stories and connect with
+              others.
+            </p>
+            <div class="create-share__cta">
+              <p class="create-share__cta-text">get an invite</p>
+              <!--make arrow white-->
+              <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
+            </div>
+          </div>
+        </section>
 
-			<section class="designed-for-everyone">
-				<h1 class="upper">Designed for everyone</h1>
-				<p>
-					Photosnap can help you create stories that resonate with
-					your audience. Our tool is designed for photographers of all
-					levels, brands, businesses you name it.
-				</p>
-				<div>
-					<p class="upper">View the stories</p>
-					<img src="./assets/shared/desktop/arrow.svg" alt="" />
-				</div>
-				<div>
-					<img
-						src="./assets/home/desktop/designed-for-everyone.jpg"
-						alt="man holding camera"
-					/>
-				</div>
-			</section>
+        <div class="main-grid__item create-share__img-container">
+          <img
+            src="./assets/home/desktop/create-and-share.jpg"
+            alt="man standing on dock of lake"
+            class="create-share__img"
+          />
+        </div>
 
-			<section class="stories">
-				<div class="mountains">
-					<h3>The Mountains</h3>
-					<p>by John Appleseed</p>
-					<div>
-						<p class="upper">read story</p>
-						<img src="./assets/shared/desktop/arrow.svg" alt="" />
-					</div>
-				</div>
+        <div class="main-grid__item beautiful-stories__img-container">
+          <img
+            src="./assets/home/desktop/beautiful-stories.jpg"
+            alt="laptop and books on desk"
+            class="beautiful-stories__img"
+          />
+        </div>
 
-				<div class="cityscapes">
-					<h3>Sunset Cityscapes</h3>
-					<p>by Benjamin Crux</p>
-					<div>
-						<p class="upper">read story</p>
-						<img src="./assets/shared/desktop/arrow.svg" alt="" />
-					</div>
-				</div>
+        <section class="main-grid__item beautiful-stories">
+          <div class="beautiful-stories__container">
+            <h1 class="beautiful-stories__title">
+              Beautiful stories every time
+            </h1>
+            <p class="beautiful-stories__body">
+              We provide design templates to ensure your stories look terrific.
+              Easily add photos, text, embed maps and media from other networks.
+              Then share your story with everyone.
+            </p>
+            <div class="beautiful-stories__cta">
+              <p class="beautiful-stories__cta-text">view the stories</p>
+              <img src="./assets/shared/desktop/arrow.svg" alt="" />
+            </div>
+          </div>
+        </section>
 
-				<div class="voyage">
-					<h3>18 Days Voyage</h3>
-					<p>by Alexei Borodin</p>
-					<div>
-						<p class="upper">read story</p>
-						<img src="./assets/shared/desktop/arrow.svg" alt="" />
-					</div>
-				</div>
+        <section class="main-grid__item designed-everyone">
+          <div class="designed-everyone__container">
+            <h1 class="designed-everyone__title">Designed for everyone</h1>
+            <p class="designed-everyone__body">
+              Photosnap can help you create stories that resonate with your
+              audience. Our tool is designed for photographers of all levels,
+              brands, businesses you name it.
+            </p>
+            <div class="designed-everyone__cta">
+              <p class="designed-everyone__cta-text">View the stories</p>
+              <img src="./assets/shared/desktop/arrow.svg" alt="" />
+            </div>
+          </div>
+        </section>
 
-				<div class="architecturals">
-					<h3>Architecturals</h3>
-					<p>by Samantha Brooke</p>
-					<div>
-						<p class="upper">read story</p>
-						<img src="./assets/shared/desktop/arrow.svg" alt="" />
-					</div>
-				</div>
-			</section>
+        <div class="main-grid__item designed-everyone__img-container">
+          <img
+            src="./assets/home/desktop/designed-for-everyone.jpg"
+            alt="man holding camera"
+            class="designed-everyone__img"
+          />
+        </div>
+      </div>
 
-			<section class="features">
-				<div class="responsive">
-					<img
-						src="./assets/features/desktop/responsive.svg"
-						alt=""
-					/>
-					<h3>100% Responsive</h3>
-					<p>
-						No matter which the device you’re on, our site is fully
-						responsive and stories look beautiful on any screen.
-					</p>
-				</div>
+      <section class="stories">
+        <div class="stories__item stories__item--mountains">
+          <h3 class="stories__title">The Mountains</h3>
+          <p class="stories__author">by John Appleseed</p>
+          <div class="stories__cta">
+            <p class="stories__cta-text">read story</p>
+            <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
+          </div>
+        </div>
 
-				<div class="no-limit">
-					<img src="./assets/features/desktop/no-limit.svg" alt="" />
-					<h3>No Photo Upload Limit</h3>
-					<p>
-						Our tool has no limits on uploads or bandwidth. Freely
-						upload in bulk and share all of your stories in one go.
-					</p>
-				</div>
+        <div class="stories__item stories__item--cityscapes">
+          <h3 class="stories__title">Sunset Cityscapes</h3>
+          <p class="stories__author">by Benjamin Crux</p>
+          <div class="stories__cta">
+            <p class="stories__cta-text">read story</p>
+            <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
+          </div>
+        </div>
 
-				<div class="embed">
-					<img src="./assets/features/desktop/embed.svg" alt="" />
-					<h3>Available to Embed</h3>
-					<p>
-						Embed Tweets, Facebook posts, Instagram media, Vimeo or
-						YouTube videos, Google Maps, and more.
-					</p>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<div class="light-logo">
-				<!--make text white-->
-				<img src="./assets/shared/desktop/logo.svg" alt="" />
-			</div>
+        <div class="stories__item stories__item--voyage">
+          <h3 class="stories__title">18 Days Voyage</h3>
+          <p class="stories__author">by Alexei Borodin</p>
+          <div class="stories__cta">
+            <p class="stories__cta-text">read story</p>
+            <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
+          </div>
+        </div>
 
-			<div class="social-links">
-				<img src="./assets/shared/desktop/facebook.svg" alt="" />
-				<img src="./assets/shared/desktop/youtube.svg" alt="" />
-				<img src="./assets/shared/desktop/twitter.svg" alt="" />
-				<img src="./assets/shared/desktop/pinterest.svg" alt="" />
-				<img src="./assets/shared/desktop/instagram.svg" alt="" />
-			</div>
+        <div class="stories__item stories__item--architecturals">
+          <h3 class="stories__title">Architecturals</h3>
+          <p class="stories__author">by Samantha Brooke</p>
+          <div class="stories__cta">
+            <p class="stories__cta-text">read story</p>
+            <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
+          </div>
+        </div>
+      </section>
 
-			<div class="footer-page-links uppper">
-				<p>Home</p>
-				<p>Stories</p>
-				<p>Features</p>
-				<p>Pricing</p>
-			</div>
+      <section class="features">
+        <div class="features__item">
+          <img src="./assets/features/desktop/responsive.svg" alt="" />
+          <h3 class="features__title">100% Responsive</h3>
+          <p class="features__body">
+            No matter which the device you’re on, our site is fully responsive
+            and stories look beautiful on any screen.
+          </p>
+        </div>
 
-			<div>
-				<p class="upper">Get an invite</p>
-				<!--make arrow white-->
-				<img src="./assets/shared/desktop/arrow.svg" alt="" />
-			</div>
+        <div class="features__item">
+          <div class="features__item--container">
+            <img src="./assets/features/desktop/no-limit.svg" alt="" />
+          </div>
+          <h3 class="features__title">No Photo Upload Limit</h3>
+          <p class="features__body">
+            Our tool has no limits on uploads or bandwidth. Freely upload in
+            bulk and share all of your stories in one go.
+          </p>
+        </div>
 
-			<p>Copyright 2019. All Rights Reserved</p>
-		</footer>
-	</body>
+        <div class="features__item">
+          <img src="./assets/features/desktop/embed.svg" alt="" />
+          <h3 class="features__title">Available to Embed</h3>
+          <p class="features__body">
+            Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
+            videos, Google Maps, and more.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="./assets/shared/desktop/logo_light.svg" alt="" />
+      </div>
+
+      <div class="footer__socials">
+        <img
+          id="facebook"
+          class="footer__socials--facebook"
+          src="./assets/shared/desktop/facebook_light.svg"
+          alt=""
+        />
+        <img
+          id="youtube"
+          class="footer__socials--youtube"
+          src="./assets/shared/desktop/youtube_light.svg"
+          alt=""
+        />
+        <img
+          id="twitter"
+          class="footer__socials--twitter"
+          src="./assets/shared/desktop/twitter_light.svg"
+          alt=""
+        />
+        <img
+          id="pinterest"
+          class="footer__socials--pinterest"
+          src="./assets/shared/desktop/pinterest_light.svg"
+          alt=""
+        />
+        <img
+          id="instagram"
+          class="footer__socials--instagram"
+          src="./assets/shared/desktop/instagram_light.svg"
+          alt=""
+        />
+      </div>
+
+      <p class="footer__page--home footer__page--links">Home</p>
+      <p class="footer__page--stories footer__page--links">Stories</p>
+      <p class="footer__page--features footer__page--links">Features</p>
+      <p class="footer__page--pricing footer__page--links">Pricing</p>
+
+      <div class="footer__cta">
+        <p class="footer__cta-text">Get an invite</p>
+        <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
+      </div>
+
+      <p class="footer__copyright">Copyright 2019. All Rights Reserved</p>
+    </footer>
+  </body>
 </html>

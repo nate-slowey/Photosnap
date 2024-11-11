@@ -1,0 +1,29 @@
+/*Header*/
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0px;
+  text-transform: uppercase;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+
+.header__invite--button {
+  background-color: #000;
+  color: white;
+  padding: 12px 24px;
+}
+
+.header__invite--button:hover {
+  background: #dfdfdf;
+  color: #000;
+  cursor: pointer;
+}
