@@ -47,3 +47,51 @@ instagram.addEventListener('mouseleave', () => {
   instagram.src = 'assets/shared/desktop/instagram_light.svg';
 });
 
+let monthly = document.querySelector('.prices__options--monthly');
+let yearly = document.querySelector('.prices__options--yearly');
+const basicPrice = document.querySelector('.prices__card--price--basic');
+const proPrice = document.querySelector('.prices__card--price--pro');
+const businessPrice = document.querySelector('.prices__card--price--business');
+const billing = document.querySelectorAll(".prices__card--billing");
+const basicYearPrice = "$190.00";
+const proYearPrice = "$390.00";
+const businessYearPrice = "$990.00";
+const basicMonthPrice = "$19.00";
+const proMonthPrice = "$39.00";
+const businessMonthPrice = "$99.00";
+
+let toggle = document.getElementById("toggle");
+
+//SLIDER BOLD 
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    yearly.style.fontWeight = "bold";
+    monthly.style.fontWeight = "normal";
+    monthly.style.opacity = 0.50;
+    yearly.style.opacity = 1;
+    basicPrice.firstChild.nodeValue = basicYearPrice;
+    proPrice.firstChild.nodeValue = proYearPrice;
+    businessPrice.firstChild.nodeValue = businessYearPrice;
+    billing[0].textContent = "per year";
+    billing[1].textContent = "per year";
+    billing[2].textContent = "per year";
+    
+    
+  } else {
+    monthly.style.fontWeight = "bold";
+    yearly.style.fontWeight = "normal";
+    yearly.style.opacity = 0.50;
+    monthly.style.opacity = 1;
+    basicPrice.firstChild.nodeValue = basicMonthPrice;
+    proPrice.firstChild.nodeValue = proMonthPrice;
+    businessPrice.firstChild.nodeValue = businessMonthPrice;
+    billing[0].textContent = "per month";
+    billing[1].textContent = "per month";
+    billing[2].textContent = "per month";
+
+  }
+}); 
+
+
+
+

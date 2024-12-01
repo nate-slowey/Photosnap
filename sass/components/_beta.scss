@@ -1,0 +1,30 @@
+.beta {
+  background: no-repeat 100%/cover url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/shared/desktop/bg-beta.jpg");
+  color: #fff;
+  padding: 4.25rem 10.313rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    @include base-font;
+    @include hero__title;
+    max-width: 420px;
+  }
+
+  &__cta {
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include uppercase-cta;
+  }
+
+  &__cta:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__cta--text {
+    @include uppercase-cta;
+  }
+}

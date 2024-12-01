@@ -15,14 +15,14 @@ body {
 }
 
 @mixin uppercase-cta {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   line-height: 1em;
   letter-spacing: 2px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.hero__title {
+@mixin hero__title {
   font-weight: bold;
   letter-spacing: 4.17px;
   line-height: 48px;
@@ -34,7 +34,7 @@ body {
   opacity: 0.75;
 }
 
-.hero__body{
+@mixin hero__body{
   font-size: 0.938em;
   line-height: 25px;
   opacity: 0.60;
@@ -43,6 +43,8 @@ body {
 .hero__cta-text {
   @include uppercase-cta;
 }
+
+
 
 
 

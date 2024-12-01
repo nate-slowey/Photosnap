@@ -1,11 +1,33 @@
 /* STORIES PAGE */
 .hero {
-  background: url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/moon-of-appalacia.jpg") no-repeat center 20% / cover;
+  background: url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/moon-of-appalacia.jpg")
+    no-repeat center 20% / cover;
   color: #fff;
   padding: 7.625em 7em;
   min-height: 650px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      225deg,
+      transparent 60%,
+      rgba(90, 119, 255, 0.10) 75%,
+      rgba(188, 113, 152, 0.25) 85%,
+      rgba(255, 197, 147, 0.45) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
   &__container {
     max-width: 380px;
+    position: relative;
+    z-index: 1;
   }
 
   &__featured {
@@ -15,6 +37,7 @@
 
   &__title {
     padding-bottom: 1rem;
+    @include hero__title;
   }
 
   &__data {
@@ -25,10 +48,25 @@
 
   &__body {
     padding-bottom: 1.5rem;
+    @include hero__body;
   }
 
   &__cta {
     display: flex;
     gap: 16px;
   }
+
+  &__cta:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+    & ~ .hero::before {
+      // Add this to show glow on hover
+      opacity: 1;
+    }
+  }
+}
+
+.hero:has(.hero__cta:hover)::before {
+  opacity: 1;
 }

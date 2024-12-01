@@ -1,10 +1,9 @@
 .stories {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
   &__item {
     font-family: "DM Sans", sans-serif;
-    width: 25%;
     min-height: 31.25em;
     background-position: center center;
     background-size: cover;
@@ -62,11 +61,110 @@
 
   &__item--world-tour {
     background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.75) 100%
-    ),
-    url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/world-tour.jpg");
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/world-tour.jpg");
+  }
+
+  &__item--corners {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/unforeseen-corners.jpg");
+  }
+
+  &__item--africa {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/king-on-africa.jpg");
+  }
+
+  &__item--nowhere {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/trip-to-nowhere.jpg");
+  }
+
+  &__item--sea {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/rage-of-the-sea.jpg");
+  }
+
+  &__item--running {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/running-free.jpg");
+  }
+
+  &__item--waves {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/behind-the-waves.jpg");
+  }
+
+  &__item--waters {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/calm-waters.jpg");
+  }
+
+  &__item--milky-way {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/milky-way.jpg");
+  }
+
+  &__item--forest {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/dark-forest.jpg");
+  }
+
+  &__item--somwarpet {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/somwarpet.jpg");
+  }
+
+  &__item--dreams {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.75) 100%
+      ),
+      url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/land-of-dreams.jpg");
   }
 
   &__cta {
@@ -88,6 +186,11 @@
   &__title {
     line-height: 1.563em;
     font-size: 1.125em;
+  }
+
+  &__date {
+    font-size: 0.813em; 
+    padding-bottom: 4px;
   }
 }
 

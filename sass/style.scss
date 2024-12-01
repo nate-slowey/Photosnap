@@ -5,6 +5,9 @@
 @import 'components/socials';
 @import 'components/story-card';
 @import 'components/feature';
+@import 'components/beta'; 
+@import 'components/table';
+@import 'components/price';
 
 @import 'layouts/footer';
 @import 'layouts/header';
@@ -12,3 +15,5 @@
 
 @import 'pages/home';
 @import 'pages/stories';
+@import 'pages/features';
+@import 'pages/pricing';

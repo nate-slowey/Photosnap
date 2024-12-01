@@ -1,9 +1,10 @@
 .features {
-  display: flex;
-  justify-content: center;
-  margin: 7.5em 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 7.5em auto;
+  max-width: 1110px;
   gap: 1.875em;
-  font-family: "DM";
+  row-gap: 6.5rem;
 
   &__item {
     font-family: "DM Sans", sans-serif;
