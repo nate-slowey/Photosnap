@@ -44,6 +44,9 @@ body {
   @include uppercase-cta;
 }
 
+.no-break {
+  white-space: nowrap;
+}
 
 
 
