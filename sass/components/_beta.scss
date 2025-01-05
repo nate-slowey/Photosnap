@@ -1,5 +1,5 @@
 .beta {
-  background: no-repeat 100%/cover url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/shared/desktop/bg-beta.jpg");
+  background: no-repeat 100% / cover url("/assets/shared/desktop/bg-beta.jpg");
   color: #fff;
   padding: 4.25rem 10.313rem;
   display: flex;
@@ -26,5 +26,29 @@
 
   &__cta--text {
     @include uppercase-cta;
+  }
+}
+
+@media (44em < width < 62.5em) {
+  .beta {
+    padding: 3.75rem 2.5rem;
+  }
+}
+
+//MOBILE
+@media (width < 44em) {
+  .beta {
+    flex-direction: column;
+    padding: 4rem 2rem;
+
+    &__title {
+      max-width: none;
+      padding-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    &__cta {
+      justify-content: start;
+    }
   }
 }

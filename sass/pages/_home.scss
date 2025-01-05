@@ -1,13 +1,11 @@
-
 .create-share {
   background-color: #000;
   color: #fff;
   @include base-font;
   display: flex;
-  
   min-width: 610px;
 
-  &__flex {
+  &__container {
     display: flex;
   }
 
@@ -38,7 +36,7 @@
     @include uppercase-cta;
   }
 
-  &__container {
+  &__text-box {
     max-width: 387px;
     padding: 10.75rem 0;
     margin-inline: auto;
@@ -46,16 +44,13 @@
 
   &__img-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    overflow: hidden;
     min-height: 650px;
     width: 100%;
     min-width: 273px;
   }
 
   &__img {
-    height: 650px;
+    max-height: 650px;
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -68,22 +63,24 @@
   color: #000;
   @include base-font;
   display: flex;
-  flex-direction: column;
+  min-width: 610px;
+
+  &__container {
+    display: flex;
+  }
 
   &__title {
     font-size: 2.5rem;
     @include uppercase-text;
     letter-spacing: 0.261rem;
     padding-bottom: 1.31rem;
-    max-width: 387px;
-    text-align: left;
+    max-width: 320px;
   }
 
   &__body {
     font-size: 0.938rem;
     opacity: 0.6;
     padding-bottom: 3rem;
-    max-width: 387px;
   }
 
   &__cta {
@@ -100,24 +97,25 @@
     @include uppercase-cta;
   }
 
-  &__container {
-    padding: 8.5rem 7rem;
-    margin: 0 auto;
+  &__text-box {
+    padding: 8.5rem 0;
+    margin-inline: auto;
+    max-width: 387px;
   }
 
   &__img-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    height: 600px;
+    min-height: 600px;
+    width: 100%;
+    min-width: 273px;
   }
 
   &__img {
+    height: 600px;
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: 28% center;
+    min-width: 273px;
   }
 }
 
@@ -126,14 +124,18 @@
   color: #000;
   @include base-font;
   display: flex;
-  flex-direction: column;
+  min-width: 610px;
+
+  &__container {
+    display: flex;
+  }
 
   &__title {
     font-size: 2.5rem;
     @include uppercase-text;
     letter-spacing: 0.261rem;
     padding-bottom: 1.31rem;
-    padding-right: 4rem;
+    max-width: 320px;
   }
 
   &__body {
@@ -156,32 +158,94 @@
     @include uppercase-cta;
   }
 
-  &__container {
-    max-width: 387px;
+  &__text-box {
     padding: 8.5rem 0;
-    margin: 0 auto;
+    margin-inline: auto;
+    max-width: 387px;
   }
 
   &__img-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    overflow: hidden;
-
-    height: 600px;
+    min-height: 600px;
+    width: 100%;
+    min-width: 273px;
   }
 
   &__img {
+    height: 600px;
     width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: center;
+    min-width: 273px;
   }
 }
 
-
 @media (max-width: 883px) {
+  .create-share,
+  .beautiful-stories,
+  .designed-everyone {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .create-share__img-container,
+  .beautiful-stories__img-container,
+  .designed-everyone__img-container {
+    max-width: 273px;
+  }
+}
+
+// MOBILE
+@media (width < 44em) {
   .create-share {
-    min-width: 495px;
+    &__container {
+      flex-direction: column-reverse;
+    }
+
+    &__img-container{
+      max-width: none;
+      min-height: auto;
+      max-height: 18em;
+    }
+
+    &__text-box {
+      padding: 4.5em 1.5em 4.5em 2em;
+    }
+  }
+
+  .beautiful-stories {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__img-container {
+      max-width: none;
+    }
+
+    &__text-box {
+      padding: 4.5em 1.5em 4.5em 2em;
+    }
+  }
+
+
+  .designed-everyone {
+    &__container {
+      flex-direction: column-reverse;
+    }
+
+    &__img-container {
+      max-width: none;
+    }
+
+    &__text-box {
+      padding: 6em 1.5em 6em 2em;
+    }
+  }
+
+  .stories {
+    &__item {
+      min-height: 375px;
+     
+    }
   }
 }

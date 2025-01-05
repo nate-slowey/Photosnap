@@ -1,10 +1,13 @@
 .features {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 7.5em auto;
-  max-width: 1110px;
-  gap: 1.875em;
+  grid-template-columns:
+    repeat(auto-fit, minmax(340px, 1fr));
+  margin: 10rem 0;
+  padding: 0 2.5rem;
+  margin-inline: auto;
+  max-width: 1300px;
   row-gap: 6.5rem;
+  column-gap: 1.875rem;
 
   &__item {
     font-family: "DM Sans", sans-serif;
@@ -13,6 +16,8 @@
     align-items: center;
     text-align: center;
     max-width: 350px;
+    margin-inline: auto;
+
   }
 
   &__item--container {
@@ -24,12 +29,34 @@
   &__title {
     padding-top: 3em;
     padding-bottom: 1em;
+    font-size: 1.125rem;
   }
 
   &__body {
     opacity: 0.6;
-    font-size: 0.938em;
+    font-size: 0.938rem;
+    line-height: 25px;
   }
 }
+
+@media (max-width: 883px) {
+  .features {
+    flex-direction: column;
+    padding: 0 2.375rem;
+    column-gap: 0.688rem;
+  }
+}
+
+@media (width < 44em) {
+  .features {
+    margin: 5em 2em;
+    padding: 0;
+    grid-template-columns:
+    repeat(auto-fit, minmax(310px, 1fr));
+
+  }
+}
+
+ 
 
 

@@ -18,61 +18,95 @@
     <title>Photosnap</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo">
+    <header class="topnav wrapper">
+      <div class="topnav__logo">
         <a href="index.html">
           <img src="./assets/shared/desktop/logo.svg" alt="" />
         </a>
       </div>
-      <nav class="header__nav">
-        <p class="header__nav-item">
-         <a href="stories.html">Stories</a> 
-        </p>
-        
-        <p class="header__nav-item">
-          <a href="features.html">Features</a>
-        </p>
 
-        <p class="header__nav-item">
-          <a href="pricing.html">Pricing</a>
-        </p>
+      <nav class="topnav__mobile-nav">
+        <!--mobile nav-->
+        <button id="btnOpen" class="topnav__open" aria-expanded="false">
+          <img src="assets/shared/mobile/menu.svg" alt="" />
+        </button>
+        <div class="topnav__menu" role="dialog">
+          <button class="topnav__close" id="btnClose" aria-label="Close">
+            <img
+              src="assets/shared/mobile/close.svg"
+              alt=""
+              width="15"
+              height="15"
+            />
+          </button>
+          <ul class="topnav__links">
+            <li class="topnav__item">
+              <a href="stories.html" class="topnav__link">Stories</a>
+            </li>
+            <li class="topnav__item">
+              <a href="features.html" class="topnav__link">Features</a>
+            </li>
+            <li class="topnav__item">
+              <a href="pricing.html" class="topnav__link">Pricing</a>
+            </li>
+            <li class="topnav__item">
+              <button class="topnav__invite--button">Get an invite</button>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <a class="header__invite--button">Get an invite</a>
+
+      <nav class="topnav__desktop-nav">
+        <ul class="topnav__links">
+          <li class="topnav__item">
+            <a href="stories.html" class="topnav__link">STORIES</a>
+          </li>
+          <li class="topnav__item">
+            <a href="features.html" class="topnav__link">FEATURES</a>
+          </li>
+          <li class="topnav__item">
+            <a href="pricing.html" class="topnav__link">PRICING</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="topnav__cta">
+        <button class="topnav__invite--button">Get an invite</button>
+      </div>
     </header>
 
     <main>
       <!--TODO: linear gradient bar on left-->
-      <div class="main-grid">
-        <div class="create-share__flex">
-          <section class="main-grid__item create-share">
-            <div class="create-share__container">
-              <h1 class="create-share__title">
-                Create and share your photo Stories.
-              </h1>
-              <p class="create-share__body">
-                Photosnap is a platform for photographers and visual storytellers.
-                We make it easy to share photos, tell stories and connect with
-                others.
-              </p>
-              <div class="create-share__cta">
-                <p class="create-share__cta-text">get an invite</p>
-                <!--make arrow white-->
-                <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
-              </div>
+      <section class="create-share__container">
+        <div class="create-share">
+          <div class="create-share__text-box">
+            <h1 class="create-share__title">
+              Create and share your photo Stories.
+            </h1>
+            <p class="create-share__body">
+              Photosnap is a platform for photographers and visual storytellers.
+              We make it easy to share photos, tell stories and connect with
+              others.
+            </p>
+            <div class="create-share__cta">
+              <p class="create-share__cta-text">get an invite</p>
+              <!--make arrow white-->
+              <img src="./assets/shared/desktop/arrow_light.svg" alt="" />
             </div>
-          </section>
-  
-          <div class="main-grid__item create-share__img-container">
-            <img
-              src="./assets/home/desktop/create-and-share.jpg"
-              alt="man standing on dock of lake"
-              class="create-share__img"
-            />
           </div>
-
         </div>
 
-        <div class="main-grid__item beautiful-stories__img-container">
+        <div class="create-share__img-container">
+          <img
+            src="./assets/home/desktop/create-and-share.jpg"
+            alt="man standing on dock of lake"
+            class="create-share__img"
+          />
+        </div>
+      </section>
+
+      <section class="beautiful-stories__container">
+        <div class="beautiful-stories__img-container">
           <img
             src="./assets/home/desktop/beautiful-stories.jpg"
             alt="laptop and books on desk"
@@ -80,10 +114,10 @@
           />
         </div>
 
-        <section class="main-grid__item beautiful-stories">
-          <div class="beautiful-stories__container">
+        <div class="beautiful-stories">
+          <div class="beautiful-stories__text-box">
             <h1 class="beautiful-stories__title">
-              Beautiful stories <span class="no-break">every time</span> 
+              Beautiful stories every time
             </h1>
             <p class="beautiful-stories__body">
               We provide design templates to ensure your stories look terrific.
@@ -95,10 +129,12 @@
               <img src="./assets/shared/desktop/arrow.svg" alt="" />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="main-grid__item designed-everyone">
-          <div class="designed-everyone__container">
+      <section class="designed-everyone__container">
+        <div class="designed-everyone">
+          <div class="designed-everyone__text-box">
             <h1 class="designed-everyone__title">Designed for everyone</h1>
             <p class="designed-everyone__body">
               Photosnap can help you create stories that resonate with your
@@ -110,16 +146,22 @@
               <img src="./assets/shared/desktop/arrow.svg" alt="" />
             </div>
           </div>
-        </section>
-
-        <div class="main-grid__item designed-everyone__img-container">
-          <img
-            src="./assets/home/desktop/designed-for-everyone.jpg"
-            alt="man holding camera"
-            class="designed-everyone__img"
-          />
         </div>
-      </div>
+
+        <div class="designed-everyone__img-container">
+          <picture class="designed-everyone__img">
+            <source
+              srcset="./assets/home/tablet/designed-for-everyone.jpg"
+              media="(max-width: 768px)"
+            />
+            <img
+              class="designed-everyone__img"
+              src="./assets/home/desktop/designed-for-everyone.jpg"
+              alt=""
+            />
+          </picture>
+        </div>
+      </section>
 
       <section class="stories">
         <div class="stories__item stories__item--mountains">
@@ -229,10 +271,20 @@
         />
       </div>
 
-      <p class="footer__page--home footer__page--links">Home</p>
-      <p class="footer__page--stories footer__page--links">Stories</p>
-      <p class="footer__page--features footer__page--links">Features</p>
-      <p class="footer__page--pricing footer__page--links">Pricing</p>
+      <div class="footer__pages">
+        <p class="footer__page--home footer__page--links">
+          <a href="index.html">Home</a>
+        </p>
+        <p class="footer__page--stories footer__page--links">
+          <a href="stories.html">Stories</a>
+        </p>
+        <p class="footer__page--features footer__page--links">
+          <a href="features.html">Features</a>
+        </p>
+        <p class="footer__page--pricing footer__page--links">
+          <a href="pricing.html">Pricing</a>
+        </p>
+      </div>
 
       <div class="footer__cta">
         <p class="footer__cta-text">Get an invite</p>

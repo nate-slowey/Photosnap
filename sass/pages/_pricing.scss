@@ -108,7 +108,6 @@
   max-width: 1110px;
   width: 95%;
 
-
   &--middle {
     background: #000;
     color: #fff;
@@ -122,14 +121,14 @@
     padding-bottom: 1.125rem;
     padding-top: 5.5rem;
   }
-  
+
   &--middle-btn {
     background: #fff;
     color: #000;
   }
-  
+
   &--outer {
-    background: #F5F5F5;
+    background: #f5f5f5;
     color: #000;
     width: 31.5%;
     padding-bottom: 2.5rem;
@@ -139,7 +138,7 @@
     color: #fff;
     background: #000;
   }
-  
+
   &--title {
     font-weight: bold;
     font-size: 1.5rem;
@@ -149,7 +148,7 @@
 
   &--body {
     margin: 0 auto;
-    opacity: 0.60;
+    opacity: 0.6;
     padding: 0 2.5rem 2.5rem 2.5rem;
     line-height: 25px;
   }
@@ -167,7 +166,7 @@
   }
 
   &--billing {
-    opacity: 0.60;
+    opacity: 0.6;
     font-size: 0.938rem;
     line-height: 25px;
     font-weight: normal;
@@ -177,8 +176,10 @@
 }
 
 .pricing__table {
-  margin: 0 auto 10rem auto;
-  max-width: 731px;
+  margin-inline: auto;
+  margin-bottom: 10rem;
+  max-width: 900px;
+  width: 90%;
   @include base-font;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -192,4 +193,224 @@
     text-align: center;
     margin-bottom: 3.5rem;
   }
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.mobile-feature-grid {
+  display: none;
+}
+
+@media (max-width: 883px) {
+  .pricing__hero {
+    grid-template-columns: 64% 36%;
+
+    &--text-box {
+      padding: 0;
+      width: 78%;
+      max-width: 495px;
+      margin: 0 3.375rem;
+    }
+  }
+
+  .prices__card {
+    flex-direction: column;
+    gap: 2rem;
+
+    &--outer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      text-align: left;
+    }
+
+    &--middle {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      text-align: left;
+      padding-bottom: 2.5rem;
+    }
+
+    &--title {
+      padding-top: 0;
+    }
+
+    &--middle-title {
+      padding-top: 0;
+    }
+
+    &--body {
+      padding: 0 0 2rem 0;
+    }
+
+    &--container {
+      width: 40%;
+      padding: 3rem 0 2rem 2.5rem;
+    }
+
+    &--price--basic {
+      width: 60%;
+      text-align: right;
+      padding: 2.625rem 3rem 0 0;
+    }
+
+    &--price--business {
+      width: 60%;
+      text-align: right;
+      padding: 2.625rem 3rem 0 0;
+    }
+
+    &--price--pro {
+      width: 60%;
+      text-align: right;
+      padding: 2.625rem 3rem 0 0;
+    }
+
+    &--outer-btn {
+      max-width: 35%;
+      margin: 0 0 0 2.5rem;
+    }
+
+    &--middle-btn {
+      max-width: 35%;
+      margin: 0 0 0 2.5rem;
+    }
+  }
+}
+
+//MOBILE
+@media (width < 33em) {
+  .pricing {
+    &__hero {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__hero--img-container {
+      max-height: 19em;
+    }
+
+    &__hero--text {
+      padding: 4em 2em;
+    }
+
+    &__hero--text-box {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .prices__card {
+    &--outer {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    &--middle {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    &--container {
+      width: 100%;
+      padding: 3.5em 0 2.5em 0;
+    }
+
+    &--body {
+      padding: 0 1.375em;
+    }
+
+    &--price--basic {
+      text-align: center;
+      padding: 0;
+    }
+
+    &--price--pro {
+      padding: 0;
+      text-align: center;
+    }
+
+    &--price--business {
+      padding: 0;
+      text-align: center;
+    }
+
+    &--outer-btn {
+      margin: 0;
+      padding: 0.75rem 2.313rem;
+      max-width: none;
+      width: 70%;
+    }
+
+    &--middle-btn {
+      margin: 0;
+      padding: 0.75rem 2.313rem;
+      max-width: none;
+      width: 70%;
+    }
+  }
+
+  .pricing__table  {
+    display: none;
+
+    &--title {
+      display: none;
+    }
+  }
+
+  .mobile-feature-grid {
+    margin-inline: auto;
+    margin-bottom: 5rem;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    text-transform: uppercase;
+    font-family: $font-stack;
+
+    &__title {
+      grid-row: 1;
+      grid-column: span 3;
+      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding-bottom: 1.438rem;
+      margin-bottom: 1.438rem;
+      border-bottom: 2px solid #000;
+    }
+
+    &__features {
+      grid-column: span 3;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      padding-bottom: 1rem;
+    }
+
+  
+    &__basic, &__pro, &__business {
+      display: flex;
+      font-size: 0.8rem;
+      flex-direction: column; 
+      gap: 0.5rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #d8d8d8;
+      &>img {
+        max-width: 18px;
+      }
+    }
+  }
+  
+ 
+  
+
+  
 }

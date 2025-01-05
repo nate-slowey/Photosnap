@@ -8,12 +8,42 @@ td img {
 
 td {
   border-bottom: 2px solid #dfdfdf;
-  padding: 1.438rem 9.125rem 1.438rem 0;
+  padding: 2% 10% 2% 0;
+}
+
+td>img {
+  min-width: 1.125rem;
 }
 
 th {
   border-bottom: 2px solid #000;
-  padding: 1.438rem 9.125rem 1.438rem 0;
+  padding: 2% 10% 2% 0;
 }
+
+
+@media (width < 33em) {
+
+  td {
+    padding:0;
+    border: none;
+    width: min-content;
+  }
+
+  th {
+    text-align: left;
+    padding: 1.438rem 0;
+  }
+
+  td, th {
+    width: 33.33%;
+  } 
+  }
+
+
+  
+  
+
+
+
 
 

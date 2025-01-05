@@ -1,29 +1,125 @@
 /*Header*/
-.header {
+.topnav {
   display: flex;
-  justify-content: space-around;
-  padding: 16px 0px;
-  text-transform: uppercase;
-  font-family: "DM Sans", sans-serif;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  justify-content: space-between;
   align-items: center;
+  padding-block: 1.5rem;
+  margin-inline: 1.5rem;
   max-width: 1440px;
-  margin: 0 auto;
+
+  @media (width > 90rem) {
+    margin-inline: auto;
+  }
+
+  &__open[aria-expanded="true"] {
+    + .topnav__menu {
+      translate: 0;
+    }
+  }
+
+  &__close {
+    display: block;
+    margin-inline-start: auto;
+    margin-block-end: 3rem;
+    background: none;
+    padding-top: 1rem;
+
+    @media (width >= 44em) {
+      display: none;
+    }
+  }
+
+  &__open {
+    padding: 0.75rem 0;
+    @media (width >= 44em) {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 2.3rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+    @media (width < 44em) {
+      flex-direction: column;
+      letter-spacing: 2.5px;
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    @media (width <44em) {
+      width: 90%;
+    }
+  }
+
+  &__item:nth-child(3) {
+    @media (width < 44em) {
+      padding-bottom: 1em;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__link {
+    @include base-font;
+    font-weight: bold;
+
+    @media (width < 44em) {
+      letter-spacing: 2.5px;
+    }
+
+    @media (width >44em) {
+    }
+  }
+
+  &__menu {
+    @media (width < 44em) {
+      background-color: #fff;
+      position: fixed;
+      inset: 0 0 auto 0;
+      padding: 1rem;
+      z-index: 2;
+      translate: 100vw 0;
+      transition: translate 0.5s ease-in-out;
+    }
+  }
+
+  &__logo {
+    z-index: 3;
+  }
+
+  &__invite--button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  &__invite--button:hover {
+    background: #dfdfdf;
+    color: #000;
+    cursor: pointer;
+  }
+
+  &__mobile-nav {
+    @media (width > 44em) {
+      display: none;
+    }
+  }
+
+  &__desktop-nav, &__cta {
+    @media (width < 44em) {
+      display: none;
+    }
+  }
 }
 
 
 
-.header__invite--button {
-  background-color: #000;
-  color: white;
-  padding: 12px 24px;
-}
 
-.header__invite--button:hover {
-  background: #dfdfdf;
-  color: #000;
-  cursor: pointer;
-}

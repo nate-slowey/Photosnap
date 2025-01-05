@@ -1,6 +1,6 @@
 /* STORIES PAGE */
 .hero {
-  background: url("/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/stories/desktop/moon-of-appalacia.jpg")
+  background: url("/assets/stories/desktop/moon-of-appalacia.jpg")
     no-repeat center 20% / cover;
   color: #fff;
   padding: 7.625em 7em;
@@ -65,8 +65,42 @@
       opacity: 1;
     }
   }
+
+  &__mobile-img-container {
+    display: none;
+  }
+
+  @media (max-width: 883px) {
+    padding-left: 2.438rem;
+  }
+
 }
 
 .hero:has(.hero__cta:hover)::before {
   opacity: 1;
+}
+
+
+//MOBILE 
+@media (width < 27em) {
+  .hero {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    
+    &__container {
+      background:#000;
+      padding: 3em 2em;
+      max-width: none;
+    }
+
+    &__mobile-img-container {
+      display: block;
+     
+    }
+
+    &__mobile-img {
+      width: 100%;
+    }
+  }
 }

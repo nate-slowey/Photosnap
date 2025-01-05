@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./dist/style.css" />
     <script src="script.js" defer></script>
     <link
@@ -11,30 +15,64 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-
     <title>Photosnap</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo">
+    <header class="topnav wrapper">
+      <div class="topnav__logo">
         <a href="index.html">
           <img src="./assets/shared/desktop/logo.svg" alt="" />
         </a>
       </div>
-      <nav class="header__nav">
-        <p class="header__nav-item">
-          <a href="stories.html">Stories</a>
-        </p>
 
-        <p class="header__nav-item">
-          <a href="features.html">Features</a>
-        </p>
-
-        <p class="header__nav-item">
-          <a href="pricing.html">Pricing</a>
-        </p>
+      <nav class="topnav__mobile-nav">
+        <!--mobile nav-->
+        <button id="btnOpen" class="topnav__open" aria-expanded="false">
+          <img src="assets/shared/mobile/menu.svg" alt="" />
+        </button>
+        <div class="topnav__menu" role="dialog">
+          <button class="topnav__close" id="btnClose" aria-label="Close">
+            <img
+              src="assets/shared/mobile/close.svg"
+              alt=""
+              width="15"
+              height="15"
+            />
+          </button>
+          <ul class="topnav__links">
+            <li class="topnav__item">
+              <a href="stories.html" class="topnav__link">Stories</a>
+            </li>
+            <li class="topnav__item">
+              <a href="features.html" class="topnav__link">Features</a>
+            </li>
+            <li class="topnav__item">
+              <a href="pricing.html" class="topnav__link">Pricing</a>
+            </li>
+            <li class="topnav__item">
+              <button class="topnav__invite--button">Get an invite</button>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <a class="header__invite--button">Get an invite</a>
+
+      <nav class="topnav__desktop-nav">
+        <ul class="topnav__links">
+          <li class="topnav__item">
+            <a href="stories.html" class="topnav__link">STORIES</a>
+          </li>
+          <li class="topnav__item">
+            <a href="features.html" class="topnav__link">FEATURES</a>
+          </li>
+          <li class="topnav__item">
+            <a href="pricing.html" class="topnav__link">PRICING</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="topnav__cta">
+        <button class="topnav__invite--button">Get an invite</button>
+      </div>
     </header>
 
     <section class="pricing__hero">
@@ -72,32 +110,44 @@
 
     <section class="prices__card">
       <div class="prices__card--outer">
-        <h2 class="prices__card--title">Basic</h2>
-        <p class="prices__card--body">
-          Includes basic usage of our platform. Recommended for new and aspiring
-          photographers.
+        <div class="prices__card--container">
+          <h2 class="prices__card--title">Basic</h2>
+          <p class="prices__card--body">
+            Includes basic usage of our platform. Recommended for new and
+            aspiring photographers.
+          </p>
+        </div>
+        <p class="prices__card--price--basic">
+          $19.00 <span class="prices__card--billing">per month</span>
         </p>
-        <p class="prices__card--price--basic">$19.00 <span class="prices__card--billing">per month</span></p>
         <button class="prices__card--outer-btn">pick plan</button>
       </div>
 
       <div class="prices__card--middle">
-        <h2 class="prices__card--middle-title">Pro</h2>
-        <p class="prices__card--body">
-          More advanced features available. Recommended for photography veterans
-          and professionals.
+        <div class="prices__card--container">
+          <h2 class="prices__card--middle-title">Pro</h2>
+          <p class="prices__card--body">
+            More advanced features available. Recommended for photography
+            veterans and professionals.
+          </p>
+        </div>
+        <p class="prices__card--price--pro">
+          $39.00 <span class="prices__card--billing">per month</span>
         </p>
-        <p class="prices__card--price--pro">$39.00 <span class="prices__card--billing">per month</span></p>
         <button class="prices__card--middle-btn">pick plan</button>
       </div>
 
       <div class="prices__card--outer">
-        <h2 class="prices__card--title">Business</h2>
-        <p class="prices__card--body">
-          Additional features available such as more detailed metrics.
-          Recommended for business owners.
+        <div class="prices__card--container">
+          <h2 class="prices__card--title">Business</h2>
+          <p class="prices__card--body">
+            Additional features available such as more detailed metrics.
+            Recommended for business owners.
+          </p>
+        </div>
+        <p class="prices__card--price--business">
+          $99.00 <span class="prices__card--billing">per month</span>
         </p>
-        <p class="prices__card--price--business">$99.00 <span class="prices__card--billing">per month</span></p>
         <button class="prices__card--outer-btn">pick plan</button>
       </div>
     </section>
@@ -112,62 +162,185 @@
       </tr>
       <tr>
         <td>Unlimited Story Posting</td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
       <tr>
         <td>Unlimited Photo Upload</td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
       <tr>
         <td>Embedding Custom Content</td>
         <td></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
       <tr>
         <td>Customize Metadata</td>
         <td></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
       <tr>
         <td>Advanced Metrics</td>
         <td></td>
         <td></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
       <tr>
         <td>Photo Downloads</td>
         <td></td>
         <td></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
       <tr>
         <td>Search Engine Indexing</td>
         <td></td>
         <td></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
       <tr>
-        <td>Custom Analytics </td>
+        <td>Custom Analytics</td>
         <td></td>
         <td></td>
-        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark"></td>
+        <td><img src="assets/pricing/desktop/check.svg" alt="checkmark" /></td>
       </tr>
     </table>
-  
+
+    <div class="mobile-feature-grid">
+      <h2 class="mobile-feature-grid__title">the features</h2>
+
+      <p class="mobile-feature-grid__features">unlimited story posting</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+        <img
+          src="assets/pricing/desktop/check.svg"
+          alt=""
+          width="18"
+          height="15"
+        />
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+
+      <p class="mobile-feature-grid__features">unlimited photo upload</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+        <img
+          src="assets/pricing/desktop/check.svg"
+          alt=""
+          width="18"
+          height="15"
+        />
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+
+      <p class="mobile-feature-grid__features">embedding custom content</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+        <img
+          src="assets/pricing/desktop/check.svg"
+          alt=""
+          width="18"
+          height="15"
+        />
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+
+      <p class="mobile-feature-grid__features">customize metadata</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+        <img
+          src="assets/pricing/desktop/check.svg"
+          alt=""
+          width="18"
+          height="15"
+        />
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+
+      <p class="mobile-feature-grid__features">advanced metrics</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+
+      <p class="mobile-feature-grid__features">photo downloads</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+
+      <p class="mobile-feature-grid__features">search engine indexing</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+
+      <p class="mobile-feature-grid__features">custom analytics</p>
+      <div class="mobile-feature-grid__basic">
+        <p>Basic</p>
+      </div>
+      <div class="mobile-feature-grid__pro">
+        <p>Pro</p>
+      </div>
+      <div class="mobile-feature-grid__business">
+        <p>Business</p>
+        <img src="assets/pricing/desktop/check.svg" alt="" />
+      </div>
+    </div>
+
     <section class="beta">
       <h2 class="beta__title">We're in Beta. Get your invite today!</h2>
       <div class="beta__cta">
         <p class="beta__cta--text">Get an Invite</p>
-        <img
-          src="/Users/nate/Desktop/Code/Portfolio Projects/photosnap/assets/shared/desktop/arrow_light.svg"
-          alt=""
-        />
+        <img src="/assets/shared/desktop/arrow_light.svg" alt="" />
       </div>
     </section>
   </body>
@@ -210,10 +383,20 @@
       />
     </div>
 
-    <p class="footer__page--home footer__page--links">Home</p>
-    <p class="footer__page--stories footer__page--links">Stories</p>
-    <p class="footer__page--features footer__page--links">Features</p>
-    <p class="footer__page--pricing footer__page--links">Pricing</p>
+    <div class="footer__pages">
+      <p class="footer__page--home footer__page--links">
+        <a href="index.html">Home</a>
+      </p>
+      <p class="footer__page--stories footer__page--links">
+        <a href="stories.html">Stories</a>
+      </p>
+      <p class="footer__page--features footer__page--links">
+        <a href="features.html">Features</a>
+      </p>
+      <p class="footer__page--pricing footer__page--links">
+        <a href="pricing.html">Pricing</a>
+      </p>
+    </div>
 
     <div class="footer__cta">
       <p class="footer__cta-text">Get an invite</p>
